@@ -1,0 +1,32 @@
+# Firmware binaries (large, sensitive)
+digicap.dav
+digicap.dav 2
+*.dav
+*.bin
+*.img
+*.elf
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Test output / logs
+*.log
+*.pcap
+*.pcapng
