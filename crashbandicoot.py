@@ -43,9 +43,8 @@ Usage:
 
 import socket, struct, time, sys, argparse
 
-# ─── Target defaults ──────────────────────────────────────────────────────────
+# ─── Ports ────────────────────────────────────────────────────────────────────
 
-DEFAULT_TARGET = "█████████████"
 RTSP_PORT      = 554
 HTTP_PORT      = 80
 
@@ -756,8 +755,8 @@ Examples:
         """
     )
     p.add_argument('-t', '--target',
-                   default=DEFAULT_TARGET,
-                   help=f'Target IP (default: {DEFAULT_TARGET})')
+                   required=True,
+                   help='Target IP address of the Hikvision device')
     p.add_argument('-m', '--mode',
                    required=True, choices=MODES.keys(),
                    help='Exploit mode (see below)')
