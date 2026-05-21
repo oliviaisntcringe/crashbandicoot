@@ -55,7 +55,8 @@
 | 5 | HTTP | `Host` | Heap BOF | **7.5** | DoS ✅ | **0-day** |
 | 6 | HTTP | Флуд заголовками | Stack exhaust | **7.5** | DoS ✅ | **0-day** |
 
-> Подробное сравнение с CVE-2014-4878/4879/4880 и CVE-2025-66177 → [`docs/cve-comparison.md`](docs/cve-comparison.md)
+> Подробное сравнение с CVE-2014-4878/4879/4880 и CVE-2025-66177 → [`docs/cve-comparison.md`](docs/cve-comparison.md)  
+> Shodan дорки для поиска уязвимых устройств → [`docs/shodan-dorks.md`](docs/shodan-dorks.md)
 
 ---
 
