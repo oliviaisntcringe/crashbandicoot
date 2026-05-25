@@ -199,6 +199,9 @@ digicap.dav  294 МБ  AES-256-ECB  (ключ неизвестен)
 
 ## ⚠️ Расследование: захардкоженный IP, AT&T и два правительства
 
+![Detective Board](docs/graphs/05_detective_board.png)
+
+
 В файле `common.js` веб-интерфейса прошивки обнаружена строка:
 
 ```javascript
