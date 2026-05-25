@@ -84,6 +84,17 @@ server:"DVRDVS-Webs" port:554
 
 ---
 
+## Графики
+
+| | |
+|---|---|
+| ![CVSS](docs/graphs/01_cvss_scores.png) | ![Timing](docs/graphs/02_timing_oracle.png) |
+| ![Stack](docs/graphs/03_stack_layout.png) | ![Scan](docs/graphs/04_bxr0_scan.png) |
+
+> Перегенерировать: `python3 tools/gen_graphs.py`
+
+---
+
 ## Быстрый старт
 
 ```bash
