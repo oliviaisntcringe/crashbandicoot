@@ -80,6 +80,8 @@ server:"DVRDVS-Webs" port:554
 
 Полный список дорков с фильтрами по странам и брендам → **[docs/shodan-dorks.md](docs/shodan-dorks.md)**
 
+![Shodan — 156 339 устройств с открытым RTSP](docs/screenshots/02_shodan_results.png)
+
 > ⚠️ Тестировать только на своих устройствах или с письменным разрешением владельца.
 
 ---
@@ -221,6 +223,8 @@ NetName:    SIS-80-8-2012
 OrgName:    AT&T Enterprises, LLC
 Address:    208 S. Akard St., Dallas, TX 75202
 ```
+
+![WHOIS 172.9.4.222 — AT&T Enterprises LLC, AS7018](docs/screenshots/03_whois_att.png)
 
 Это не адрес разработчика в офисе Hikvision в Ханчжоу. Это IP-блок **AT&T** — одного из крупнейших телекоммуникационных операторов США.
 
