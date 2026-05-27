@@ -16,6 +16,7 @@
 ![ARM](https://img.shields.io/badge/arch-ARM_Cortex--A9-lightgrey?style=flat-square)
 ![No ASLR](https://img.shields.io/badge/ASLR-нет-red?style=flat-square)
 ![No NX](https://img.shields.io/badge/NX-нет-red?style=flat-square)
+![AI-assisted](https://img.shields.io/badge/AI--assisted-Claude-blueviolet?style=flat-square&logo=anthropic)
 
 <br>
 
@@ -358,5 +359,9 @@ Watchdog    ~2.5s (user crash)  /  >90s (kernel panic)  /  никогда (RCE)
 <div align="center">
 
 *Исследование закрыто: 2026-05-26 · Все находки оригинальные · Базы CVE не использовались*
+
+---
+
+*AI-assisted research · Co-authored with [Claude](https://claude.ai) (Anthropic)*
 
 </div>

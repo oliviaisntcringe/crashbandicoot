@@ -139,3 +139,8 @@ with open('digicap.dav', 'rb') as f:
 - Без ключа нельзя: дизассемблировать прошивку, найти BX R0 адреса, проверить R0=ua_buf
 
 Подробнее об утечке через ECB → [`ecb-leak.md`](ecb-leak.md)
+
+
+---
+
+*Co-authored with [Claude](https://claude.ai) (Anthropic)*

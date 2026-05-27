@@ -94,3 +94,8 @@ HiSilicon Hi3531/Hi3521/Hi3520D используется не только в Hi
 | `server:hikvision-webs` | ~1.9 млн |
 | `"Embedded Net DVR"` | подмножество DVR-класса |
 | `"Embedded Net DVR" port:554` | уточнённая выборка с открытым RTSP |
+
+
+---
+
+*Co-authored with [Claude](https://claude.ai) (Anthropic)*

@@ -287,3 +287,8 @@ def rtsp_dos(host, port=554):
 | `exploit.py` | Ранний эксплойт (устаревший) |
 | `digicap.dav` | Прошивка (294 МБ, зашифрована AES-256-ECB) |
 | `RESEARCH.md` | **Этот файл** |
+
+
+---
+
+*Co-authored with [Claude](https://claude.ai) (Anthropic)*

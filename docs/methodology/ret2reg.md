@@ -116,3 +116,8 @@ LOOP_SC = ARM_NOP * 24 + ARM_LOOP + b'\x01\x01'
 
 R4 гарантированно = `ARM_NOP` = `0xe1a01001` (kernel-space, не shellcode адрес).  
 Чтобы R4 указывал на ua_buf, нужно знать его адрес — тот же круг.
+
+
+---
+
+*Co-authored with [Claude](https://claude.ai) (Anthropic)*

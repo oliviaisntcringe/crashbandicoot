@@ -107,3 +107,8 @@ grep '\x10\xff\x2f\xe1' rtsp_daemon → BX R0 адрес → RCE
 ```
 
 Само по себе слабо, но в комбинации с отсутствием подписи (CWE-354) и переполнениями — критично.
+
+
+---
+
+*Co-authored with [Claude](https://claude.ai) (Anthropic)*

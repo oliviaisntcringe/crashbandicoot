@@ -1765,3 +1765,8 @@ Baseline перед запуском: `0x40111104` → **HIT 2.8s** — oracle �
 ---
 
 *Исследование завершено. Дата: 2026-05-26.*
+
+
+---
+
+*Co-authored with [Claude](https://claude.ai) (Anthropic)*

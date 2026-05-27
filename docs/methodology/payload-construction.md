@@ -128,3 +128,8 @@ Syscalls ARM Linux:
   arm-linux-gnueabi-objcopy -O binary sc.o sc.bin
   python3 -c "d=open('sc.bin','rb').read(); assert 0 not in d; print(len(d),'bytes')"
 ```
+
+
+---
+
+*Co-authored with [Claude](https://claude.ai) (Anthropic)*

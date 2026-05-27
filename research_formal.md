@@ -503,3 +503,8 @@ def http_host_overflow_poc(host: str, port: int = 80) -> str:
 ---
 
 *Исследование проведено в образовательных целях на тестовом образце прошивки.*
+
+
+---
+
+*Co-authored with [Claude](https://claude.ai) (Anthropic)*

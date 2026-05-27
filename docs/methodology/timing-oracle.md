@@ -114,3 +114,8 @@ reg_fill = ARM_NOP * 8            # R4–R11 → быстрый crash
 - Ложных DEAD при правильных R4-R11: **0** из 117 проб
 
 Oracle надёжен.
+
+
+---
+
+*Co-authored with [Claude](https://claude.ai) (Anthropic)*

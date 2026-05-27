@@ -76,3 +76,8 @@ AV:N / AC:L / PR:N / UI:N / S:C / C:N / I:N / A:H  =  8.1 High
 ```bash
 python3 exploits/crashbandicoot.py -t █████████████ --mode dos-accept
 ```
+
+
+---
+
+*Co-authored with [Claude](https://claude.ai) (Anthropic)*

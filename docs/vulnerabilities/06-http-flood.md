@@ -85,3 +85,8 @@ AV:N / AC:L / PR:N / UI:N / S:U / C:N / I:N / A:H  =  7.5 High
 python3 exploits/crashbandicoot.py -t █████████████ --mode dos-http
 # (включает оба вектора HH + HF)
 ```
+
+
+---
+
+*Co-authored with [Claude](https://claude.ai) (Anthropic)*

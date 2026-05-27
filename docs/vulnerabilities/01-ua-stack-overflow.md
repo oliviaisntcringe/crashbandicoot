@@ -122,3 +122,8 @@ python3 exploits/crashbandicoot.py -t █████████████ --
 python3 exploits/crashbandicoot.py -t █████████████ --mode scan-bxr0
 python3 exploits/crashbandicoot.py -t █████████████ --mode rce --gadget 0xXXXXXXXX
 ```
+
+
+---
+
+*Co-authored with [Claude](https://claude.ai) (Anthropic)*
